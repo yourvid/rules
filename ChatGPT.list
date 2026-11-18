@@ -33,7 +33,6 @@ DOMAIN-SUFFIX,host.livekit.cloud
 DOMAIN-SUFFIX,turn.livekit.cloud
 
 # ========== 登录与身份相关 ==========
-DOMAIN,challenges.cloudflare.com
 DOMAIN-SUFFIX,workos.com
 DOMAIN-SUFFIX,workoscdn.com
 DOMAIN-SUFFIX,auth0.com
@@ -44,8 +43,6 @@ DOMAIN-SUFFIX,api.statsig.com
 DOMAIN-SUFFIX,ct.sendgrid.net
 DOMAIN,browser-intake-datadoghq.com
 DOMAIN,rum.browser-intake-datadoghq.com
-DOMAIN,static.cloudflareinsights.com
-DOMAIN,humb.apple.com
 
 # ========== 关键 IP-CIDR（防止 DNS 污染 / 覆盖语音验证 IP） ==========
 IP-CIDR,104.18.0.0/16,no-resolve
