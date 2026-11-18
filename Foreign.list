@@ -1,0 +1,10 @@
+# 国外 专用规则集
+# 格式: classical
+# 原则: 所有 OpenAI 自有及强相关域名/IP 统一走独立出口，避免出口分裂触发风控
+
+# ========== apkpure ==========
+- DOMAIN-SUFFIX,apkpure.com,PROXY
+- DOMAIN-SUFFIX,apkpure.net,PROXY
+- DOMAIN-SUFFIX,pureapk.com,PROXY
+- DOMAIN-SUFFIX,winudf.com,PROXY
+- DOMAIN-SUFFIX,cdnpure.com,PROXY
