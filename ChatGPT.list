@@ -1,0 +1,79 @@
+# ChatGPT / OpenAI 专用规则集
+# 格式: classical | 更新: 2026-11
+# 原则: 所有 OpenAI 自有及强相关域名/IP 统一走独立出口，避免出口分裂触发风控
+
+# ========== 核心自有域名 ==========
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,chat.com
+DOMAIN-SUFFIX,sora.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaistatsig.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,openaiusercontent.com
+DOMAIN-SUFFIX,crixet.com
+DOMAIN-KEYWORD,openai
+
+# ========== CDN / 后端 / 实时通道 ==========
+DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net
+DOMAIN-SUFFIX,openaicom.imgix.net
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,production-openaicom-storage.azureedge.net
+DOMAIN-SUFFIX,openaicomproductionae4b.blob.core.windows.net
+DOMAIN-SUFFIX,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN-SUFFIX,webpubsub.azure.com
+
+# ========== 人机验证 (Arkose) ==========
+DOMAIN,client-api.arkoselabs.com
+DOMAIN,openai-api.arkoselabs.com
+
+# ========== 语音 / 实时通信 (LiveKit) ==========
+DOMAIN-SUFFIX,chatgpt.livekit.cloud
+DOMAIN-SUFFIX,host.livekit.cloud
+DOMAIN-SUFFIX,turn.livekit.cloud
+
+# ========== 登录与身份相关 ==========
+DOMAIN,challenges.cloudflare.com
+DOMAIN-SUFFIX,workos.com
+DOMAIN-SUFFIX,workoscdn.com
+DOMAIN-SUFFIX,auth0.com
+
+# ========== 第三方依赖（OpenAI 实际请求路径中出现） ==========
+DOMAIN-SUFFIX,algolia.net
+DOMAIN-SUFFIX,api.statsig.com
+DOMAIN-SUFFIX,ct.sendgrid.net
+DOMAIN,browser-intake-datadoghq.com
+DOMAIN,rum.browser-intake-datadoghq.com
+DOMAIN,static.cloudflareinsights.com
+DOMAIN,humb.apple.com
+
+# ========== 关键 IP-CIDR（防止 DNS 污染 / 覆盖语音验证 IP） ==========
+IP-CIDR,104.18.0.0/16,no-resolve
+IP-CIDR,104.244.43.229/32,no-resolve
+IP-CIDR,102.37.57.54/32,no-resolve
+IP-CIDR,13.71.25.29/32,no-resolve
+IP-CIDR,135.220.40.201/32,no-resolve
+IP-CIDR,172.203.39.49/32,no-resolve
+IP-CIDR,172.207.173.200/32,no-resolve
+IP-CIDR,172.214.226.198/32,no-resolve
+IP-CIDR,191.233.251.27/32,no-resolve
+IP-CIDR,20.162.96.163/32,no-resolve
+IP-CIDR,20.168.48.117/32,no-resolve
+IP-CIDR,20.184.36.134/32,no-resolve
+IP-CIDR,20.203.144.245/32,no-resolve
+IP-CIDR,20.74.221.21/32,no-resolve
+IP-CIDR,4.151.200.38/32,no-resolve
+IP-CIDR,4.155.146.196/32,no-resolve
+IP-CIDR,4.197.172.116/32,no-resolve
+IP-CIDR,4.217.235.100/32,no-resolve
+IP-CIDR,4.245.198.13/32,no-resolve
+IP-CIDR,40.118.236.137/32,no-resolve
+IP-CIDR,51.4.112.173/32,no-resolve
+IP-CIDR,52.143.181.161/32,no-resolve
+IP-CIDR,68.155.152.41/32,no-resolve
+IP-CIDR,72.146.20.246/32,no-resolve
+IP-CIDR,74.248.148.7/32,no-resolve
+IP-CIDR,199.47.142.0/23,no-resolve
+IP-CIDR,24.199.123.28/32,no-resolve
+IP-CIDR,64.23.132.171/32,no-resolve
+IP-CIDR6,2604:f20::/32,no-resolve
